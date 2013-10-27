@@ -1,0 +1,8 @@
+rvm_install_on_use_flag=1
+rvm --create use ruby-1.9.3-p392@Lever_client_vm
+
+cur_gem_ver=$(gem env version)
+if [ "${cur_gem_ver}" != "1.8.23" ]
+then
+     rvm rubygems 1.8.23
+fi
